@@ -5,14 +5,14 @@
     <img id="background-img" src="images/pingpong.jpg">
     <div class="demo-wrap">
         <body>
-            <label for="num-sets">Pick number of sets to win: </label>
-            <input type="number" id="num-sets" min="1"><br>
-            <label for="first-serve" >pick a player to serve first</label>
-            <select id="serve-select" onchange="pickFirstServe()" name="first-serve">
-                <option selected></option>
-                <option>left</option>
-                <option>right</option>
-            </select>
+            <h4 class="label" for="num-sets">Pick number of sets to win: <input type="number" id="num-sets" min="1"></h4>
+            <h4 id="label" for="first-serve" >Pick a player to serve first
+                <select id="serve-select" onchange="pickFirstServe()" name="first-serve">
+                    <option selected></option>
+                    <option>left</option>
+                    <option>right</option>
+                </select>
+            </h4>
             <h1>Rezultat</h1>
             <img id="ball-img-left" src="images/bela zogica.png">
             <h2 id="rezultat">0 : 0</h2>
@@ -31,7 +31,8 @@
             <p id="entries"></p>
             <p>Koncni rezultat:</p>
             <p id="koncni-rezultat"></p>
-            <script src="index.js"></script>
+            <button id="new-game" onclick="newGame()">NEW GAME</button>
         </body>
     </div>
+    <script src="index.js"></script>
 </html>

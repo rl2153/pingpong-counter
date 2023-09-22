@@ -35,12 +35,17 @@ let serviraZacetek = 0
 // hranimo kdo servira trenutno
 let serviraTrenutno = serviraZacetek
 
-// ce zacetni server in stevilo setov za zmago ni izbrano, onemogoci vse gumbe
-if (firstServeEl.value === "" || numSetsEl.value === "") {
+// onemogoci vse gumbe
+function disableButtons() {
     allButtons.forEach(function(button) {
         button.disabled = true;
-        console.log("gumbi so onemogoceni")
     });
+    console.log("gumbi so onemogoceni")
+}
+
+// ce zacetni server in stevilo setov za zmago ni izbrano, onemogoci vse gumbe
+if (firstServeEl.value === "" || numSetsEl.value === "") {
+    disableButtons()
 }
 
 
@@ -208,6 +213,21 @@ function changeServePoint() {
         ballImgRightEl.style.opacity = 0
         serviraTrenutno = 0
     }
+}
+
+function newGame() {
+    firstServeEl.selectedIndex = 0
+    numSetsEl.value = ""
+    tockeLevi = 0
+    tockeDesni = 0
+    vsotaTock = 0
+    rezultatEl.textContent = resultString()
+    setLevi = 0
+    setDesni = 0
+    setsEl.textContent = setsString()
+    entriesEl.textContent = ""
+    koncniRezEl.textContent = ""
+    disableButtons()
 }
 
 
