@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+
+    </head>
+    <img id="background-img" src="images/pingpong.jpg">
+    <div class="demo-wrap">
+        <body>
+            <label for="num-sets">Pick number of sets to win: </label>
+            <input type="number" id="num-sets" min="1"><br>
+            <label for="first-serve" >pick a player to serve first</label>
+            <select id="serve-select" onchange="pickFirstServe()" name="first-serve">
+                <option selected></option>
+                <option>left</option>
+                <option>right</option>
+            </select>
+            <h1>Rezultat</h1>
+            <img id="ball-img-left" src="images/bela zogica.png">
+            <h2 id="rezultat">0 : 0</h2>
+            <img id="ball-img-right" src="images/bela zogica.png">
+            <h3 id="seti">0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0</h3>
+            <div id="inc-btn">
+                <button id="inc-btn-left" onclick="incrementLeft()">INCREMENT</button>
+                <button id="inc-btn-right" onclick="incrementRight()">INCREMENT</button>
+            </div>
+            <div id="dec-btn">
+                <button id="dec-btn-left" class="dec-btn" onclick="decrementLeft()">decrement</button>
+                <button id="dec-btn-right" class="dec-btn" onclick="decrementRight()">decrement</button>
+            </div>
+            <button id="save-btn" class="btn" onclick="save()">SAVE</button>
+            <p>Rezultati prejsnjih setov: </p>
+            <p id="entries"></p>
+            <p>Koncni rezultat:</p>
+            <p id="koncni-rezultat"></p>
+            <script src="index.js"></script>
+        </body>
+    </div>
+</html>
