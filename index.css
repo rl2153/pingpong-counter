@@ -6,26 +6,32 @@ body {
     font-weight: bold;
     text-align: center;
     color: black;
+    width: 100vw;
+    height: 100vh;
 }
 
 .demo-wrap {
     position: relative;
-    width: 80vw;
-    height: 80vh;
+    display: inline-block;
+
 }
 
 #background-img {
     opacity: 0.5;
     position: absolute;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    width: 100vw;
+    height: 100vh;
 }
 
 h4 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin-top: 0px;
-    font-size: 20px;
+    font-size: 30px;
+}
+
+#label {
+    margin-bottom: 60px;
 }
 
 h1 {
@@ -103,7 +109,7 @@ button {
 
 p {
     font-size: 20px;
-    margin: 5px;
+    margin: 30px;
 }
 
 #koncni-rezultat {
@@ -141,7 +147,7 @@ p {
 #new-game {
     background: black;
     width: 90px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 
